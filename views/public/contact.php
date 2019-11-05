@@ -43,7 +43,7 @@
                             <h4 class="mb-2 pb-2 border-bottom position-relative">Grupo Pro <i class="fas fa-exclamation-circle position-absolute" style="right: 10px; top: 7px; font-size: 16px;" data-toggle="tooltip" data-placement="left" title="Pulse en las imagenes para mas información."></i></h4>
                             <div class="row">
                                 <div class="col-sm-6 py-1 text-center">
-                                    <img src="<?= $relativePath ?>/img/public/interbagPlasticos.png" width="30" class="border rounded" alt="Interbag Plasticos" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Plasticos Industriales Interbag C.A." data-content="UPS, dedicada a la Elaboración de Bobinas para empaque de Harina, Arroz, Azúcar, entre otros productos Mercal, PDVAL. Garantizando la Seguridad Alimentaria"><br>
+                                    <img src="<?= $relativePath ?>/img/public/interbagPlasticos.png" width="30" class="border rounded" alt="Interbag Plasticos" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Plasticos Industriales Interbag C.A." data-content="UPS, dedicada a la Elaboración de Bobinas para empaque de Harina, Arroz, Azúcar, entre otros productos Mercal, PDVAL. Garantizando la security Alimentaria"><br>
                                     <a href="https://twitter.com/PlasticoInterGS" target="_blank" class='text-secondary'>
                                         <i class="fab fa-twitter"></i> Interbag Plasticos
                                     </a>
@@ -57,7 +57,7 @@
                                     <a href="https://twitter.com/VenarrozA" target="_blank" class='text-secondary'><i class="fab fa-twitter"></i> Venarroz R.S.A, C.A</a>
                                 </div>
                                 <div class="col-sm-6 py-1 text-center">
-                                    <img src="<?= $relativePath ?>/img/public/pronutricos.png" width="30" class="border rounded" alt="Pronutricos C.A" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Pronutricos" data-content="Industria Venezolana Maicera Pronutricos. Empresa administrada por el MINPPAL en pro a la seguridad alimentaria de la patria. Harina de maíz precocida Venezuela."><br>
+                                    <img src="<?= $relativePath ?>/img/public/pronutricos.png" width="30" class="border rounded" alt="Pronutricos C.A" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Pronutricos" data-content="Industria Venezolana Maicera Pronutricos. Empresa administrada por el MINPPAL en pro a la security alimentaria de la patria. Harina de maíz precocida Venezuela."><br>
                                     <a href="https://twitter.com/pronutricos" target="_blank" class='text-secondary'>
                                         <i class="fab fa-twitter"></i>
                                         PronutricosOficial

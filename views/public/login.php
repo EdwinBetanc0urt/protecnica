@@ -20,7 +20,7 @@
                 <!--
                 <form name="login" method="POST" action="./controllers/public/ctr_Login.php" class="col-sm-8 col-md-6 col-lg-4 p-0">
                 -->
-                <form name="login" class="col-sm-8 col-md-6 col-lg-4 p-0">
+                <form name="login" method="POST" class="col-sm-8 col-md-6 col-lg-4 p-0">
                     <div class="bg-white rounded px-3 py-4">
                         <div class="text-center">
                             <img src="<?= $relativePath ?>img/public/login-user.jpg" width="100" class="mb-2 rounded">
@@ -30,11 +30,11 @@
                         <div class="form-row">
                             <div class="col-sm-12 mb-1">
                                 <label for="username">Nombre de usuario: <i class="fas fa-asterisk"></i></label>
-                                <input type="text" name="userName" class="form-control form-control-sm login" id="username" autocomplete="off" data-toggle="tooltip" data-placement="top" title="">
+                                <input type="text" id="username" name="userName" class="form-control form-control-sm login" autocomplete="off" data-toggle="tooltip" data-placement="top" title="">
                             </div>
                             <div class="col-sm-12">
                                 <label for="password">Contraseña: <i class="fas fa-asterisk"></i></label>
-                                <input type="password" name="userPassword" class="form-control form-control-sm login" id="password" autocomplete="off" data-toggle="tooltip" data-placement="top" title="">
+                                <input type="password" id="password" name="userPassword" class="form-control form-control-sm login" autocomplete="off" data-toggle="tooltip" data-placement="top" title="">
                             </div>
                             <input type="hidden" name="loginLocation">
                         </div>
@@ -44,7 +44,7 @@
                         </div>
 
                         <div class="d-flex justify-content-between mt-3">
-                            <button type="submit" class="btn btn-sm fondo-claro" id="execute">
+                            <button type="button" class="btn btn-sm fondo-claro" id="execute">
                                 <i class="fas fa-sign-in-alt mr-2"></i>
                                 Iniciar sesión
                             </button>
