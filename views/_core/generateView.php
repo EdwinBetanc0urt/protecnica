@@ -25,7 +25,7 @@ class generateView {
 		$relativePath = self::$relativePath . "css/";
 		self::stylesLibs();
 		?>
-		<link rel="stylesheet" href="<?= $relativePath ?>sty_Global.min.css">
+		<link rel="stylesheet" href="<?= $relativePath ?>global.css">
 		<?php
 	}
 
@@ -57,6 +57,9 @@ class generateView {
 		?>
 		<!-- Font Awesome -->
 		<link rel="stylesheet" href="<?= $relativePath ?>font-awesome/css/font-awesome.min.css">
+
+		<!-- Font Awesome v5 -->
+		<!-- <link rel="stylesheet" href="<?= $relativePath ?>font-awesome5/css/all.min.css"> -->
 
 		<!-- Ionicons -->
 		<link rel="stylesheet" href="<?= $relativePath ?>Ionicons/css/ionicons.min.css">

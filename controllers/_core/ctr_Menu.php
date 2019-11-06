@@ -88,15 +88,17 @@ function mainMenu() {
 						<?php
 						if ($rstVista) {
 							while ($arrVista = $objeto->getConsultaArreglo($rstVista)) {
-								$active = $_GET["view"];
+								$active = "";
+								$iconColor = "black-text";
 								if ($arrVista["url_vista"] == $currentView) {
 									$active = "class='active selected-menu'";
+									$iconColor = "text-red";
 								}
 
 								?>
 								<li <?= $active ?> >
 									<a href='?view=<?= $arrVista["url_vista"]; ?>' >
-										<i class="fa fa-circle-o black-text"></i>
+										<i class="fa fa-circle-o <?= $iconColor ?>"></i>
 										<?= $arrVista["nombre_vista"]; ?>
 									</a>
 								</li>

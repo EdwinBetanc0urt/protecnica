@@ -1,21 +1,40 @@
 @charset "utf-8";
 
-
+/*
 @import url("sty_Keyframes.css");
 
 @import url("sty_Clave_Items.css");
+*/
 
 
 /* Documento que une todos los estilos para evitar menos código en las vistas */
 /*-----------------------------------------------------------------------------*/
 
-.modal-dialog {
-	position: relative;
-	width: 100%;
-	margin: 10px;
+
+.sidebar-menu > li {
+	border-bottom: 1px solid #e2e2e2 !important;
 }
 /*
-Evita que las ventanas emergentes swal y su contenido tengan un tamaño muy
+.sidebar-menu > li .menu-open,
+.sidebar-menu > li .menu-open:hover,
+.sidebar-menu > li .active {
+	background-color: #c6c6c6 !important;
+	background-color: #dbdbdb !important;
+	background-color: #939393 !important;
+}
+*/
+
+.skin-red-light .sidebar-menu .treeview-menu > li > a {
+	border-bottom: 1px solid #e2e2e2 !important;
+}
+/*
+.skin-red-light .sidebar-menu > li .menu-opem > a {
+	background-color: #939393 !important;
+}*/
+
+
+/*
+Evita que las ventanas emergentes sweetAlert2 y su contenido tengan un tamaño muy
 pequeño por defecto el valor es 1rem en lugar de 14px
 */
 .swal2-popup {
@@ -78,11 +97,6 @@ html, body {
 	font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 */
-body{
-	overflow-x: hidden;
-	overflow-y: hidden;
-	/*text-transform:uppercase;*/
-}
 
 p:first-line {
 	padding-left: 100px;
@@ -144,10 +158,10 @@ detrás de la ventana modal */
 }
 
 /* Color de texto y del boton */
-.skin-red .wysihtml5-toolbar .btn-default,
-.skin-red .wysihtml5-toolbar .btn-default:hover,
-.skin-red .wysihtml5-toolbar .btn-default:active,
-.skin-red .wysihtml5-toolbar .btn-default:focus {
+.skin-red .btn-default,
+.skin-red .btn-default:hover,
+.skin-red .btn-default:active,
+.skin-red .btn-default:focus {
 	color: #444 !important;
 	background-color: #f4f4f4 !important;
 	border-color: #ddd !important;
@@ -178,6 +192,16 @@ detrás de la ventana modal */
 }
 
 /* PAGINACION */
+.skin-red .pagination > li.active > a,
+.skin-red-light .pagination > li.active > a {
+	background-color: #dd4b39 !important;
+}
+.skin-red .pagination > li > a,
+.skin-red-light .pagination > li > a {
+	border-color: #dd4b39 !important;
+}
+
+
 .skin-red .pagination > li > a:hover,
 .pagination > li > span:hover,
 .skin-red .pagination > li >	span:hover {

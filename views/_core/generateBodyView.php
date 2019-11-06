@@ -17,10 +17,6 @@ if (empty($_GET["view"]) || $_GET["view"] == "") {
 		require_once(".." . DS . ".." . DS . "views" . DS . "intranet" . DS . "dashboard.php");
 		$rutabase = ".." . DS . ".." . DS;
 	}
-
-	echo "
-		<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-		<script src='{$rutabase}libreria/AdminLTE/dist/js/pages/dashboard2.js'></script>";
 }
 
 

@@ -37,21 +37,17 @@ class generatePublicView {
 		?>
 		<!-- Bootstrap 3.3.7 -->
 		<link rel="stylesheet" href="<?= $relativePath ?>bootstrap4/css/bootstrap.min.css">
+
+		<link rel="stylesheet" href="<?= $relativePath ?>sweetalert2/dist/sweetalert2.min.css">
 		<?php
 	}
 
 	public static function fonts() {
 		$relativePath = self::$relativePath . "fonts/";
 		?>
-		<!-- Font Awesome -->
-		<!-- <link rel="stylesheet" href="<?= $relativePath ?>font-awesome/css/font-awesome.min.css"> -->
+		<!-- Font Awesome v5 -->
 		<link rel="stylesheet" href="<?= $relativePath ?>font-awesome5/css/all.min.css">
-		<!-- <link rel="stylesheet href="../styles/css/all.css""> -->
 
-		<!-- Ionicons -->
-		<!-- <link rel="stylesheet" href="<?= $relativePath ?>Ionicons/css/ionicons.min.css"> -->
-
-    	<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind+Vadodara:300,400"> -->
 		<?php
 	}
 
@@ -160,11 +156,11 @@ class generatePublicView {
 		<script src="<?= $relativePath ?>jquery/dist/jquery.min.js"></script>
 
 		<script src="<?= $relativePath ?>propper/popper.min.js"></script>
-		
+
 		<!-- Bootstrap 4 -->
 		<script src="<?= $relativePath ?>bootstrap4/js/bootstrap.min.js"></script>
 
-		<script src="<?= $relativePath ?>sweetalert2/dist/sweetalert2.all.js"></script>
+		<script src="<?= $relativePath ?>sweetalert2/dist/sweetalert2.min.js"></script>
 		<?php
 	}
 

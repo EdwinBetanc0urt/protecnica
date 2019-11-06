@@ -26,13 +26,13 @@ switch ($gsOpcion) {
 		break;
 	*/
 	case "agregar":
-		fcAgregarAcceso();
+		addAccess();
 		break;
 	case "cambiar":
-		fcModificarAccesos();
+		changeAccess();
 		break;
 	case "eliminar":
-		fcEliminarAcceso();
+		removeAccess();
 		break;
 	case "listaconacceso":
 		fcListaAccesoRol();
@@ -51,7 +51,7 @@ switch ($gsOpcion) {
 
 
 //funcion.control.Registrar
-function fcAgregarAcceso() {
+function addAccess() {
 	global $gsObjeto, $gsModulo; //variable que contiene la cadena con el nombre de la Clase u Objeto
 
 	if (is_file("models" . DS . "{$gsModulo}" . DS . "cls_{$gsObjeto}.php")) {
@@ -94,7 +94,7 @@ function fcAgregarAcceso() {
 
 
 //funcion.control.Modificar
-function fcModificarAccesos() {	
+function changeAccess() {
 	global $gsObjeto, $gsModulo; //variable que contiene la cadena con el nombre de la Clase u Objeto
 
 	if (is_file("models" . DS . $gsModulo . DS . "cls_{$gsObjeto}.php")) {
@@ -200,7 +200,7 @@ function fcConsultaIdVista($psURL) {
 
 
 //función.control.Registrar
-function fcEliminarAcceso() {
+function removeAccess() {
 	global $gsObjeto, $gsModulo; //variable que contiene la cadena con el nombre de la Clase u Objeto
 
 	if (is_file("models" . DS . $gsModulo . DS . "cls_{$gsObjeto}.php")) {
@@ -257,7 +257,7 @@ function fcListaAccesoRol() {
 	$objInstancia = new RoleAccess;  //instancia la clase
 	// se le asignan la cantidad de items a mostrar, si no se define toma el valor por defecto
 	$vpItems = $_POST['setItemsCA'];
-	if ($_POST['setItemsCA'] <= 0) //si vvItems vale menor a 0 
+	if ($_POST['setItemsCA'] <= 0) //si vvItems vale menor a 0
 		$vpItems = 10; //muestra los items predeterminados
 
 	$objInstancia->atrIdRol = $_POST["setRol"];
@@ -288,28 +288,28 @@ function fcListaAccesoRol() {
 			<table border='0' valign='center' class='table table-striped text-center table-hover'>
 				<thead>
 					<tr >
-						<th > 
-							Cod <span class='caret'></span> 
+						<th >
+							Cod <span class='caret'></span>
 						</th>
-						<th > 
-							Vista <span class='caret'></span> 
+						<th >
+							Vista <span class='caret'></span>
 						</th>
-						<th > 
-							Modulo <span class='caret'></span> 
+						<th >
+							Modulo <span class='caret'></span>
 						</th>
-						<th > 
+						<th >
 							ACCESOS
 						</th>
 					</tr>
 				</thead>
 				<tbody>
-					<?php while ($arrRegistro = $objInstancia->getConsultaAsociativo($rstRecordSet)) : ?>		
+					<?php while ($arrRegistro = $objInstancia->getConsultaAsociativo($rstRecordSet)) : ?>
 						<tr >
 							<td > <?= $arrRegistro["id_vista"]; ?> </td>
 							<td> <?= ucwords($arrRegistro["nombre_vista"]); ?> </td>
 							<td> <?= ucwords($arrRegistro["nombre_modulo"]); ?> </td>
 							<td>
-								<a class='btn waves-effect waves-light blue darken-3' data-toggle='tooltip' data-placement='top' title='Editar los accesos de esta pagina' onclick='fjSeleccionarRegistro(this)' 
+								<a class='btn waves-effect waves-light blue darken-3' data-toggle='tooltip' data-placement='top' title='Editar los accesos de esta pagina' onclick='fjSeleccionarRegistro(this)'
 								datos_registro='Seleccion
 									|<?= $arrRegistro["estatus_vista"]; ?>
 									|<?= $arrRegistro["condicion_vista"]; ?>
@@ -321,7 +321,7 @@ function fcListaAccesoRol() {
 									<i class='material-icons'>mode_edit</i>
 								</a>
 								<a class='btn waves-effect waves-light blue darken-3' data-toggle='tooltip' data-placement='top' title='Quitar el acceso total a esta pagina'
-									onClick='fjQuitarVista(<?= $arrRegistro["id_vista"]; ?>)' > 
+									onClick='fjQuitarVista(<?= $arrRegistro["id_vista"]; ?>)' >
 									<i class='material-icons'>visibility_off</i>
 								</a>
 							</td>
@@ -390,7 +390,7 @@ function fcListaSinAccesoRol() {
 	$objInstancia = new RoleAccess;  //instancia la clase
 	// se le asignan la cantidad de items a mostrar, si no se define toma el valor por defecto
 	$vpItems = $_POST['setItemsSA'];
-	if ($_POST['setItemsSA'] <= 0) //si vvItems vale menor a 0 
+	if ($_POST['setItemsSA'] <= 0) //si vvItems vale menor a 0
 		$vpItems = 10; //muestra los items predeterminados
 
 	$objInstancia->atrIdRol = $_POST["setRol"];
@@ -420,16 +420,16 @@ function fcListaSinAccesoRol() {
 			<table border='0' valign='center' class='table table-striped text-center table-hover'>
 				<thead>
 					<tr>
-						<th > 
-							Cod <span class='caret'></span> 
+						<th >
+							Cod <span class='caret'></span>
 						</th>
-						<th > 
-							Vista <span class='caret'></span> 
+						<th >
+							Vista <span class='caret'></span>
 						</th>
-						<th > 
-							Modulo <span class='caret'></span> 
+						<th >
+							Modulo <span class='caret'></span>
 						</th>
-						<th > 
+						<th >
 							ACCESOS
 						</th>
 					</tr>
@@ -441,7 +441,7 @@ function fcListaSinAccesoRol() {
 							<td> <?= ucwords($arrRegistro["nombre_vista"]); ?> </td>
 							<td> <?= ucwords($arrRegistro["nombre_modulo"]); ?> </td>
 							<td>
-								<a class='btn waves-effect waves-light blue darken-3' data-toggle='tooltip' data-placement='top' onclick='fjSeleccionarRegistro(this);' title='Editar los accesos de esta pagina' 
+								<a class='btn waves-effect waves-light blue darken-3' data-toggle='tooltip' data-placement='top' onclick='fjSeleccionarRegistro(this);' title='Editar los accesos de esta pagina'
 								datos_registro='Asignar
 									|<?= $arrRegistro["estatus_vista"]; ?>
 									|<?= $arrRegistro["condicion_vista"]; ?>
@@ -524,7 +524,7 @@ function fcListaBotonSi() {
 	$rstRecordSet = $objInstancia->fmListarBotonNo();
 	header("Content-Type: text/html; charset=utf-8");
 	if ($rstRecordSet) {
-		$rstBotonesSi = $objInstancia->fmListarBotonSi();	
+		$rstBotonesSi = $objInstancia->fmListarBotonSi();
 		$i = 0;
 		while ($arrBotonesSi = $objInstancia->getConsultaAsociativo($rstBotonesSi)) {
 			$arrB[$i] = $arrBotonesSi["id_boton"];
@@ -538,13 +538,13 @@ function fcListaBotonSi() {
 			<table border='0' valign='center' class='table table-stripedEEE text-center table-hoverEEE'>
 				<thead>
 					<tr >
-						<th > 
+						<th >
 							Cod
 						</th>
-						<th > 
-							Boton 
+						<th >
+							Boton
 						</th>
-						<th > 
+						<th >
 							Accesa
 						</th>
 					</tr>
@@ -581,7 +581,7 @@ function fcListaBotonSi() {
 } //cierre de la función
 
 
- 
+
 function fcListaBotonNo() {
 	global $gsObjeto, $gsModulo; //variable que contiene la cadena con el nombre de la Clase u Objeto
 
@@ -608,21 +608,21 @@ function fcListaBotonNo() {
 			<table border='0' valign='center' class='table table-stripedEEE text-center table-hoverEE'>
 				<thead>
 					<tr >
-						<th > 
+						<th >
 							Cod
 						</th>
-						<th > 
+						<th >
 							Boton
 						</th>
-						<th > 
-							Accesa 
+						<th >
+							Accesa
 						</th>
 					</tr>
 				</thead>
 				<tbody>
-					<?php 
+					<?php
 						while ($arrRegistro = $objInstancia->getConsultaAsociativo($rstRecordSet)) : ?>
-			
+
 							<tr data-toggle='tooltip' data-placement='top' title='Doble clic para detallar los datos y realizar alguna operación' datos_id='<?= $arrRegistro["id_boton"]; ?>' onclick='fjSeleccionFila(this);'  >
 								<!-- FINAL DE LA APERTURA DEL TR DE LA FILA -->
 								<td > <?= $arrRegistro["id_boton"]; ?></td>
@@ -630,7 +630,7 @@ function fcListaBotonNo() {
 								<td >
 									<input type='checkbox' id='chkBoton<?= $arrRegistro["id_boton"]; ?>' name='chkBoton[]' value='<?= $arrRegistro["id_boton"]; ?>' class='chkBotones' />
 								</td>
-							</tr> 
+							</tr>
 					<?php endwhile; ?>
 				</tbody>
 			</table>
@@ -649,7 +649,7 @@ function fcListaBotonNo() {
 /*
 //destruye lo enviado
 if (isset($_POST))
-	unset($_POST); 
+	unset($_POST);
 
 if (isset($_GET))
 	unset($_GET);

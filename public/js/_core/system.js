@@ -1,8 +1,42 @@
 
 $(function() {
+	"use strict";
+
 	$("#listMenu").ready(function(){
 		getMenuRequest();
 	});
+
+
+	//Resolve conflict in jQuery UI tooltip with Bootstrap tooltip
+	//$.widget.bridge('uibutton', $.ui.button);
+
+	//inicia la función para los mensajes de ayuda de bootstrap
+	if ($.isFunction($.fn.tooltip)) {
+		$('[data-toggle="tooltip"]').tooltip();
+	}
+
+	//if ($.isFunction($.fn.dropdown)) {
+	//	$('.dropdown-toggle').dropdown();
+	//	$('.dropdown').dropdown('toggle');
+	//}
+
+	//inicia la función para búsquedas en los select
+	if ($.isFunction($.fn.select2)) {
+		$(".select2, .combo_buscar, .select_dinamico, .combo_dinamico")
+		.select2({
+			language: "es",
+			theme: "bootstrap"
+		});
+		//.css("width", "100%");
+	}
+
+	//inicia la función para calendarios
+	if ($.isFunction($.fn.datepicker)) {
+		$(".calendario, .datepicker").datepicker({
+			language: 'es',
+			format: 'dd-mm-yyyy'
+		});
+	}
 });
 
 //para cerrar las ventanas modales con la tecla Escape
@@ -16,7 +50,7 @@ $(document).keyup(function(pEvento){
 function closeSession(psMotivo = "sesioncerrada", psForzado = false) {
 	if (psForzado) {
 		window.location.href = "controllers/_core/ctr_LogOut.php?getMotivoLogOut=" + psMotivo;
-	} 
+	}
 	else {
 		swal({
 			title: '¡SALIR!',
@@ -156,7 +190,7 @@ function fjCamposSoloLectura2(psFormulario, pbSoloLectura = true, arrExcluye = [
 } //cierre de la función
 
 /**
- * @deprecated 
+ * @deprecated
  */
 function fjCamposNoSoloLectura(psFormulario, pbSoloLectura = false, arrExcluye = []) {
 	fjCamposSoloLectura(psFormulario, pbSoloLectura, arrExcluye);
