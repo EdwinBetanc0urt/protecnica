@@ -37,18 +37,18 @@
 				</div>
 
 				<div class="modal-footer">
-					<button type='button' id="btnModificar" name="btnModificar" class="btn btn-success" 
+					<button type='button' id="btnModificar" name="btnModificar" class="btn btn-success"
 						onClick='fjEnviar(this.value);' value="Cambiar">
-						<i class="material-icons">done</i> 
+						<i class="material-icons">done</i>
 						Cambiar Accesos
 					</button>
 
-					<button type='button' id="btnAgregar" name="btnAgregar" class="btn btn-success" 
+					<button type='button' id="btnAgregar" name="btnAgregar" class="btn btn-success"
 						onClick='fjEnviar(this.value);' value="Agregar">
-						<i class="material-icons">done</i> 
+						<i class="material-icons">done</i>
 						Asignar Accesos
 					</button>
-					<button type='button' id="btnQuitar" name="btnAgregar" class="btn btn-danger waves-light red darken-3" 
+					<button type='button' id="btnQuitar" name="btnAgregar" class="btn btn-danger waves-light red darken-3"
 						onClick='fjQuitarVista(this.form.numId.value);'  data-toggle='tooltip' data-placement='top' title='Quitar el acceso total a esta pagina'>
 						<i class='material-icons'>visibility_off</i>
 						Quitar Accesos

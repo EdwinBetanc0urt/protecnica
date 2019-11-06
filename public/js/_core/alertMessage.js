@@ -5,7 +5,7 @@
 	de mensajes a mostrar y utilizado por las operaciones como Incluir, Consultar,
 	Modificar, Eliminar y/o Restaurar del sistema, ademas de las diferentes acciones
 	o respuestas que emita el sistema.
- * @author: Edwin Betancourt <EdwinBetanc0urt@hotmail.com>
+ * @author: Edwin Betancourt <EdwinBetanc0urt@outlook.com>
  * @version 0.9
  * @created: 19-Enero-2016
  * @modificated: 19-Junio-2018

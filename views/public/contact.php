@@ -70,7 +70,7 @@
             </div>
         </div>
 
-        <!-- <div class="position-fixed bg-white w-100 h-100 loader" style="top: 0px; z-index: 4;">
+        <div class="position-fixed bg-white w-100 h-100 loader" style="top: 0px; z-index: 4;">
             <div class="row align-items-center justify-content-center mx-0 h-100">
                 <div class="col-sm-12 text-center">
                     <h3 class="h2 text-secondary">
@@ -79,7 +79,7 @@
                     </h3>
                 </div>
             </div>
-        </div> -->
+        </div>
 
 	    <?= generatePublicView::footer() ?>
 	    <?= generatePublicView::scripts() ?>

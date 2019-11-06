@@ -1,13 +1,8 @@
 
 $(function() {
-	setTimeout(
-		function () {
-			$("#listMenu").ready(function(){
-				getMenuRequest();
-			});
-		},
-		600
-	);
+	$("#listMenu").ready(function(){
+		getMenuRequest();
+	});
 });
 
 //para cerrar las ventanas modales con la tecla Escape
@@ -49,8 +44,6 @@ function closeSession(psMotivo = "sesioncerrada", psForzado = false) {
 	}
 } // cierre de la función
 
-
-
 function fjSinAcceso2() {
 	if(typeof swal === 'function') {
 		swal({
@@ -77,7 +70,6 @@ function fjSinAcceso2() {
 	}
 } //cierre de la función
 
-
 //BUSCAR COMO DETERMINAR SI SE TUVO HISTORIAL EN EL SERIVOR
 //función para ir 1 atrás en el historial
 function fjAtras() {
@@ -91,8 +83,6 @@ function fjAtras() {
 		document.location = "../../";
 	}
 } //cierre de la función
-
-
 
 /**
  * Función JavaScript Campo Solo Lectura, agrega o elimina el atributo solo

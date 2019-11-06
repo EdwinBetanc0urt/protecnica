@@ -29,7 +29,7 @@
                         <img src="<?= $relativePath ?>img/public/home-slide-1.jpg" class="d-block w-100">
                         <div class="carousel-caption d-none d-md-block">
                             <h3>Empresa Socialista ProTécnica C.A.</h3>
-                            <p>Empresa Técnica Socialista, comprometida con la patria. Ejemplo de eficiencia industrial y de trabajo con los sectores garantes de la security agroalimentaria.</p>
+                            <p>Empresa Técnica Socialista, comprometida con la patria. Ejemplo de eficiencia industrial y de trabajo con los sectores garantes de la seguridad agroalimentaria.</p>
                         </div>
                     </div>
                     <div class="carousel-item">

@@ -6,15 +6,15 @@ defined("DS") OR define("DS", DIRECTORY_SEPARATOR);
 
 if (empty($_GET["view"]) || $_GET["view"] == "") {
 	$rutabase = "";
-	if (is_file("views" . DS . "_core" . DS . "vis_Principal.php")) {
-		require_once("views" . DS . "_core" . DS . "vis_Principal.php");
+	if (is_file("views" . DS . "intranet" . DS . "dashboard.php")) {
+		require_once("views" . DS . "intranet" . DS . "dashboard.php");
 	}
-	elseif (is_file(DS . "views" . DS . "_core" . DS . "vis_Principal.php")) {
+	elseif (is_file(DS . "views" . DS . "intranet" . DS . "dashboard.php")) {
 		$rutabase = ".." . DS;
-		require_once(DS . "views" . DS . "_core" . DS . "vis_Principal.php");
+		require_once(DS . "views" . DS . "intranet" . DS . "dashboard.php");
 	}
 	else {
-		require_once(".." . DS . ".." . DS . "views" . DS . "_core" . DS . "vis_Principal.php");
+		require_once(".." . DS . ".." . DS . "views" . DS . "intranet" . DS . "dashboard.php");
 		$rutabase = ".." . DS . ".." . DS;
 	}
 
@@ -55,9 +55,9 @@ if (isset($_GET["view"])) {
 		break;
 
 		//MODULO DE CONFIGURACION
-		case "Button":
-		case "Modules":
-		case "View":
+		case "Boton":
+		case "Modulo":
+		case "Vista":
 		case "Pais":
 		case "Estado":
 		case "Ciudad":
@@ -74,7 +74,20 @@ if (isset($_GET["view"])) {
 			$vsRutaScript = "public/js/{$vsModulo}/" . lcfirst($vsComponente) . ".js";
 		break;
 
-		//MODULO DE security
+		// MODULO de Compras
+		case "RequestQuotation":
+			$vsModulo = "purchase";
+			$vsScript = "
+				<!-- Script Especifico de la Pagina -->
+				<script type='text/javascript'>
+					var vsVista = '{$vsVista}';
+					var vsModulo = '{$vsModulo}';
+					var vsComponente = '{$vsComponente}';
+				</script>";
+			$vsRutaScript = "public/js/{$vsModulo}/" . lcfirst($vsComponente) . ".js";
+		break;
+
+		// MODULO DE security
 		case "RoleAccess":
 		case "BitacoraAcceso":
 		case "ConfiguracionSistema":

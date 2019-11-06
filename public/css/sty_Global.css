@@ -1,0 +1,273 @@
+@charset "utf-8";
+
+
+@import url("sty_Keyframes.css");
+
+@import url("sty_Clave_Items.css");
+
+
+/* Documento que une todos los estilos para evitar menos código en las vistas */
+/*-----------------------------------------------------------------------------*/
+
+.modal-dialog {
+	position: relative;
+	width: 100%;
+	margin: 10px;
+}
+/*
+Evita que las ventanas emergentes swal y su contenido tengan un tamaño muy
+pequeño por defecto el valor es 1rem en lugar de 14px
+*/
+.swal2-popup {
+	font-size: 16px !important;
+}
+
+th, .input-group-btn, .btn, .panel-heading, .modal-header{
+	background-color: #dd4b39;
+	color: #fff;
+}
+
+.panel-body{
+	border: 2px solid #dd4b39;
+}
+
+a > .active{
+	background: #dd4b39;
+}
+
+.box {
+    position: relative;
+    border-radius: 3px;
+    background: #ffffff;
+    border-top: 3px solid #dd4b39;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.skin-red .pagination > li > a, .skin-red .pagination > li > span {
+    color: #dd4b39 !important;
+    background-color: #fff !important;
+    border-color: #dd4b39 !important;
+}
+
+.skin-red {
+	--estilo_rojo_oscuro: #dd4b39;
+	--letras_rojo_claro: #dd4b39;
+	--estilo_rojo_claro: #dd4b39;
+	--letras_rojo_oscuro: #dd4b39;
+}
+
+
+.btn-circle {
+	width: 30px;
+	height: 30px;
+	padding: 6px 0px;
+	border-radius: 15px;
+	text-align: center;
+	font-size: 12px;
+	line-height: 1.42857;
+}
+
+
+/* FORMATO A ELEMENTOS ESPECIFICOS (ID, CLASS) */
+/*@import url('sty_Elementos.css');*/
+
+/* HTML
+html, body {
+	font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+*/
+body{
+	overflow-x: hidden;
+	overflow-y: hidden;
+	/*text-transform:uppercase;*/
+}
+
+p:first-line {
+	padding-left: 100px;
+}
+
+
+/* Realmente importa. Este último le indicará a su navegador
+que ejecute primero esta regla, antes que cualquier otra de
+la misma clase. Ya que algunas búsquedas esta en ventanas modales
+y al ser con un z-index mayor la lista no se muestra ya que queda
+detrás de la ventana modal */
+.ui-autocomplete {
+	z-index: 215000000 !important;
+}
+
+
+
+/*******************************************************************************
+							ESTILOS CON TEMA ROJO DARK
+*******************************************************************************/
+
+/* FOOTER  global del sistema*/
+.main-footer {
+	padding: 5px !important;
+}
+
+
+
+/* Cabecera y Pie de la ventana modal */
+.skin-red .modal-header,
+.skin-red .modal-footer {
+	background-color: #333 !important;
+}
+/* Cuerpo de la ventana modal */
+.skin-red .modal-body {
+	background-color: #cb5c50 !important;
+}
+
+
+/* Cuerpo de la ventana modal */
+.skin-red .modal-body table {
+	color: #000 !important;
+}
+.skin-red .modal-body .btn {
+	border-color: #fff !important;
+}
+
+
+
+/* Color de texto y del boton */
+.skin-red .btn,
+.skin-red .btn:focus,
+.skin-red .btn:hover,
+.skin-red .btn:active {
+	background-color: #dd4b39 !important;
+	color: #fff !important;
+	background-image: linear-gradient(to bottom,#dd4b39 0,#dd4b39 100%) !important;
+	border-color: #dd4b39 !important;
+}
+
+/* Color de texto y del boton */
+.skin-red .wysihtml5-toolbar .btn-default,
+.skin-red .wysihtml5-toolbar .btn-default:hover,
+.skin-red .wysihtml5-toolbar .btn-default:active,
+.skin-red .wysihtml5-toolbar .btn-default:focus {
+	color: #444 !important;
+	background-color: #f4f4f4 !important;
+	border-color: #ddd !important;
+	background-image: -webkit-linear-gradient(#fff 0%, #e0e0e0 100%) !important;
+	background-image: -o-linear-gradient(#fff 0%, #e0e0e0 100%) !important;
+	background-image: linear-gradient(#fff 0%, #e0e0e0 100%) !important;
+	/*
+	background-color: #dd4b39 ;
+	color: #000 ;
+	*/
+}
+
+.skin-red thead {
+	background-color: #dd4b39 !important;
+	color: #fff !important;
+}
+
+.skin-red .panel {
+	color: #fff !important;
+	border-color: #dd4b39 !important;
+}
+.skin-red .panel-heading {
+	background-color: #dd4b39 !important;
+	color: #fff !important;
+}
+.skin-red .panel-body {
+	color: #000 !important;
+}
+
+/* PAGINACION */
+.skin-red .pagination > li > a:hover,
+.pagination > li > span:hover,
+.skin-red .pagination > li >	span:hover {
+	color: #dd4b39 !important;
+	background-color: #eee !important;
+	border-color: #dd4b39 !important;
+}
+.skin-red .pagination > li > a:focus,
+.skin-red .pagination > li > span:focus {
+	color: #dd4b39 !important;
+	background-color: #eee !important;
+	border-color-color: #ddd !important;
+}
+
+.skin-red .pagination > .active > a,
+.skin-red .pagination > .active > a:focus,
+.skin-red .pagination > .active > a:hover,
+.skin-red .pagination > .active > span,
+.skin-red .pagination > .active > span:focus,
+.skin-red .pagination > .active > span:hover {
+	color: #fff !important;
+	background-color: #dd4b39 !important;
+	border-color: #dd4b39 !important;
+}
+
+.skin-red .pagination > li > a,
+.skin-red .pagination > li > span {
+	color: #dd4b39 !important;
+	background-color: #fff !important;
+	border-color: #dd4b39 !important;
+
+}
+
+.skin-red .box {
+	border-top-color: #dd4b39 !important;
+}
+
+.skin-red .widget-user-header {
+	border-top-color: #dd4b39 !important;
+	background-color: #dd4b39 !important;
+	color: #fff !important;
+}
+
+.skin-red .nav-tabs-custom > .nav-tabs > li.active {
+	border-top-color: #dd4b39 !important;
+}
+
+
+
+
+/* Cuerpo de la ventana modal */
+.skin-red-light thead,
+.skin-red-light .modal-body {
+	background-color: #FFF !important;
+}
+
+
+/* color del texto de la ventana modal */
+/*.skin-blue .modal,
+.modal-header,
+.modal-body,
+.modal-footer {
+	color: #171516 !important;
+}
+
+.skin-blue thead ,
+.skin-blue-light thead {
+	background-color: #3c8dbc !important;
+}
+
+
+
+/* color del texto de la ventana modal */
+/*.skin-blue .modal {
+	color: #fff !important;
+}
+.skin-blue .modal-header {
+	background-color: #3c8dbc !important;
+}*/
+/* Cuerpo de la ventana modal */
+/*.skin-blue .modal-body {
+	background-color: #354f60 !important;
+}*/
+/* Pie de la ventana modal */
+/*.skin-blue .modal-footer {
+	background-color: #3c8dbc !important;
+}*/
+
+
+
+.oculto{
+	display: none;
+}

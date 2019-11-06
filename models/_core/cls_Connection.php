@@ -170,7 +170,7 @@ abstract class Connection
 	/**
 	 * función que envía y sanea los datos del controllers al constructor en conjunto con la función sanearFormulario
 	 * que detectan cuando hay un arreglo y lo recorre para limpiarlo, es decir existe un arreglo multidimensional
-	 * @author Edwin Betancourt <EdwinBetanc0urt@hotmail.com>
+	 * @author Edwin Betancourt <EdwinBetanc0urt@outlook.com>
 	 * @param array parámetro control Formulario $pcForm, trae todo lo enviado de la vista mediante el arreglo global $_POST
 	 * @return array atributo $this->atrFormulario, arreglo agregado al constructor con todos los valores y quitando las primeras 3 letras de la clave
 	 */
@@ -537,7 +537,7 @@ abstract class Connection
 
 	/**
 	 * Función models CuentaUsados, registros en otras tablas relacionadas que han usado este registro
-	 * @author Edwin Betancourt <EdwinBetanc0urt@hotmail.com>
+	 * @author Edwin Betancourt <EdwinBetanc0urt@outlook.com>
 	 * @return array $arreglo cantidad de registros en un entero
 	 */
 	function fmCuentaUsados()
@@ -598,7 +598,7 @@ abstract class Connection
 
 	//parámetro del models FechaBD
 	/**
-	 * @author Edwin Betancourt <EdwinBetanc0urt@hotmail.com>
+	 * @author Edwin Betancourt <EdwinBetanc0urt@outlook.com>
 	 */
 	public function faFechaFormato($pmFecha = "", $pmFormatoE = "amd", $pmFormatoR = "dma")
 	{

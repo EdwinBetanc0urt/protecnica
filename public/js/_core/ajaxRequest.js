@@ -11,18 +11,19 @@ function getMenuRequest() {
 			currentView: $('#formMenu #hidCurrentView').val()
 		},
 		function(resultado) {
-			if (resultado == false) {
-				console.log('sin consultas de menú');
+			if (resultado) {
+				$('#listMenu').html(resultado); //imprime la lista del menú
+				var subMenu = $('#listMenu li.selected-menu');
+				var menu = subMenu.parent().parent();
+				menu.addClass('active menu-open');
+				subMenu.addClass('active');
 			}
 			else {
-				//console.log('el id que toca es ' + resultado);
-				//$('#listMenu').html(''); //habilita el campo de estado
-				$('#listMenu').html(resultado); //imprime la lista del menú
+				console.log('sin consultas de menú');
 			}
 		}
 	);
 } //cierre de la función
-
 
 /**
  * Función JavaScript Envió Dinámico, envía los datos del formulario al controllers
@@ -68,7 +69,6 @@ function fjEnvioDinamico(psFormulario, pvValor = "registrar", psModal = "Ventana
 	});
 } //cierre de la función
 
-
 /**
  * Función JavaScript Envió Dinámico, Cada combo debe llevar un hidden con su
  * mismo nombre para hacer fácil las consultas sea con combos anidados y con
@@ -86,12 +86,10 @@ function fjComboGeneral(psModulo, psComponente, psDependiente = "", psDestino = 
 
 	if (psDependiente != "") {
 		viDependiente = $("#cmb" + psDependiente).val();
-		// console.log("El padre o superior es: " + psDependiente + " y su valor es: " + viDependiente);
 	}
 
 	if (psDestino != "") {
 		psComponente = psDestino;
-		// console.log("nuevo destino " + psComponente);
 	}
 
 	$.post(
@@ -104,19 +102,16 @@ function fjComboGeneral(psModulo, psComponente, psDependiente = "", psDestino = 
 			setParametros: paParametros
 		},
 		function(resultado) {
-			if (resultado == false) {
-				console.log("sin consultas de " + psComponente);
-			}
-			else {
+			if (resultado) {
 				cmbCombo = document.getElementById("cmb" + psComponente);
 				$("#cmb" + psComponente).attr("disabled", false); //habilita el campo de estado
 
 				//cmbCombo.options.length = 0; //limpia los option del select
 				cmbCombo.options.length = 1; //limpia los option del select
 				$("#cmb" + psComponente).append(resultado); //agrega los nuevos option al select
-
-				//console.log(resultado);
-				//console.log("combo generado de " + psComponente);
+			}
+			else {
+				console.log("sin consultas de " + psComponente);
 			}
 		}
 	);

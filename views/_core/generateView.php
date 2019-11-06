@@ -9,10 +9,11 @@ class generateView {
 		?>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Protecnica <?= "| " . $title ?></title>
+		<title><?= $title ?> | ProTécnica C.A.</title>
 
 		<!-- Tell the browser to be responsive to screen width -->
 		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="shortcut icon" type="image/png" href="<?= self::$relativePath ?>img/_core/logo.png">
 
 		<?php
 		// print css styles and fonts
@@ -21,6 +22,14 @@ class generateView {
 	}
 
 	public static function styles() {
+		$relativePath = self::$relativePath . "css/";
+		self::stylesLibs();
+		?>
+		<link rel="stylesheet" href="<?= $relativePath ?>sty_Global.min.css">
+		<?php
+	}
+
+	public static function stylesLibs() {
 		$relativePath = self::$relativePath . "libs/";
 		?>
 		<!-- Bootstrap 3.3.7 -->
@@ -35,7 +44,6 @@ class generateView {
 
 		<link rel="stylesheet" href="<?= $relativePath ?>select2/dist/css/select2.min.css">
 		<link rel="stylesheet" href="<?= $relativePath ?>select2/dist/css/select2-bootstrap.min.css">
-
 
 		<!-- Google Font -->
 		<!--
@@ -60,9 +68,9 @@ class generateView {
 				font-family: 'Material Icons';
 				font-style: normal;
 				font-weight: 400;
-				src: local('Material Icons'), 
-					local('MaterialIcons-Regular'), 
-					url(<?= $relativePath ?>/material-design-icons/Iconos.woff2) 
+				src: local('Material Icons'),
+					local('MaterialIcons-Regular'),
+					url(<?= $relativePath ?>/material-design-icons/Iconos.woff2)
 					format('woff2');
 			}
 
@@ -81,7 +89,7 @@ class generateView {
 				-webkit-font-feature-settings: 'liga';
 				-webkit-font-smoothing: antialiased;
 			}
-		</style>	
+		</style>
 		<?php
 	}
 
@@ -92,9 +100,9 @@ class generateView {
 			<!-- Logo -->
 			<a href="index2.html" class="logo">
 				<!-- mini logo for sidebar mini 50x50 pixels -->
-				<span class="logo-mini"><b>A</b>LT</span>
+				<span class="logo-mini"><b>P</b>T</span>
 				<!-- logo for regular state and mobile devices -->
-				<span class="logo-lg"><b>Admin</b>LTE</span>
+				<span class="logo-lg"><b>Pro</b>Técnica</span>
 			</a>
 			<!-- Header Navbar: style can be found in header.less -->
 			<nav class="navbar navbar-static-top">
@@ -109,7 +117,7 @@ class generateView {
 						<li class="dropdown user user-menu">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 								<img src="<?= $relativePath ?>libs/AdminLTE/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-								<span class="hidden-xs">Alexander Pierce</span>
+								<span class="hidden-xs"><?= $_SESSION["nombres_completos"] ?></span>
 							</a>
 							<ul class="dropdown-menu">
 								<!-- User image -->
@@ -142,12 +150,12 @@ class generateView {
 										<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
 											<div class="pull-left">
 												<small>
-													<!-- Dpto: 
+													<!-- Dpto:
 													<?= $_SESSION["sede"]["id_cargo"] . " - " . ucwords($_SESSION["sede"]["departamento"]) ?> -->
 												</small>
 											</div>
 										</div>
-								
+
 										<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 											<div class="pull-right">
 												<button type="button" onclick="closeSession();" class="btn btn-flat" data-toggle="tooltip" data-placement="bottom" title="Cerrar Sesión y Salir">
@@ -195,7 +203,7 @@ class generateView {
 					</div>
 					<input type="hidden" id="hidCurrentView" value="<?= $currentView ?>" />
 				</form>
-				<!-- /.search form --> 
+				<!-- /.search form -->
 
 				<!-- sidebar menú: : style can be found in sidebar.less -->
 				<ul class="sidebar-menu" data-widget="tree" id="listMenu">
@@ -260,9 +268,9 @@ class generateView {
 		?>
 		<footer class="main-footer">
 			<div class="pull-right hidden-xs">
-				<b>Version</b> 1.1
+				<b>Versión</b> 1.1
 			</div>
-			<strong>Copyright &copy; <?= date("Y") ?> Protecnica</strong>
+			<strong>Copyright &copy; <?= date("Y") ?> ProTécnica C.A.</strong>
 			Todos los derechos reservados.
 		</footer>
 		<?php

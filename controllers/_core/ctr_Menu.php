@@ -75,16 +75,8 @@ function mainMenu() {
 			while ($arrModulo = $objeto->getConsultaArreglo($rstModulo)) {
 				$objeto->atrIdModulo = $arrModulo["id_modulo"];
 				$rstVista = $objeto->listViews($vsBusqueda);
-				$active = "";
-				if ($rstVista AND $vsBusqueda != "") {
-					$active = "active menu-open";
-				}
-				if ($objeto->viewInMenu($currentView, $vsBusqueda)) {
-					$active = "active menu-open";
-				}
 				?>
-
-				<li class="treeview <?= $active ?>" id="list<?= ucwords($arrModulo["nombre_modulo"]); ?>">
+				<li class="treeview" id="list<?= ucwords($arrModulo["nombre_modulo"]); ?>">
 					<a>
 						<i class='<?= $arrModulo["icono_modulo"]; ?>'></i>
 						<span> <?= $arrModulo["nombre_modulo"]; ?></span>
@@ -98,7 +90,7 @@ function mainMenu() {
 							while ($arrVista = $objeto->getConsultaArreglo($rstVista)) {
 								$active = $_GET["view"];
 								if ($arrVista["url_vista"] == $currentView) {
-									$active = "class='active'";
+									$active = "class='active selected-menu'";
 								}
 
 								?>

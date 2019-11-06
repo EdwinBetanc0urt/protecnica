@@ -2,7 +2,7 @@
 	/**
 	 * Index dieccionador de vistas y paginas, para ocultar las rutas de las
 	 * carpetas y archivos, ademas de contener configuración global
-	 * @author: Edwin Betancourt <EdwinBetanc0urt@hotmail.com>
+	 * @author: Edwin Betancourt <EdwinBetanc0urt@outlook.com>
 	 * @license: CC BY-SA, Creative Commons Atribución - CompartirIgual (CC BY-SA) 4.0 Internacional.
 	 * @link https://creativecommons.org/licenses/by-sa/4.0/
 	 */
